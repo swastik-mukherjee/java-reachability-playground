@@ -3,10 +3,7 @@ on: push
 jobs:
   security:
     runs-on: ubuntu-latest
-    steps:
-      - name: snyk test
-        run: npm install -g snyk && snyk auth
-    
+    steps:    
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
